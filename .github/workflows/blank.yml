@@ -22,6 +22,8 @@ jobs:
         git clone https://github.com/blechschmidt/massdns.git
         cd massdns
         make
+        cp ./bin/massdns /usr/local/bin
+        cp ./bin/massdns ./../
 #        masscan --version
 
     - name: Install Go
@@ -53,6 +55,7 @@ jobs:
       env:
           DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}
       run: |
+        ls
         cd ../
         pwd
         cd biology_cupdated_Go_0nt1nu3s_WR3c0n_v3ris1gn 

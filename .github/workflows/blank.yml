@@ -23,7 +23,6 @@ jobs:
         cd massdns
         make
         cp ./bin/massdns /usr/local/bin
-        cp ./bin/massdns ./../
 #        masscan --version
 
     - name: Install Go

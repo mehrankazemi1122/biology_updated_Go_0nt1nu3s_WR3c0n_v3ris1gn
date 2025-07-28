@@ -79,12 +79,12 @@ jobs:
         
           
     - name: Commit and push changes
+      env:
+        GITHUB_TOKEN: ${{ secrets.TOKEN_GITHUB_CNTNS }}
       run: |
         git config --global user.name 'github-actions'
         git config --global user.email 'github-actions@github.com'
-        git remote set-url origin https://x-access-token:${{ secrets.TOKEN_GITHUB_CNTNS }}@github.com/${{ github.repository }}
+        git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}
         git add .
-        git commit -m 'Update modified files' || echo "No changes to commit"
-        git push
-      env:
-        TOKEN_GITHUB_CNTNS: ${{ secrets.TOKEN_GITHUB_CNTNS }}
+        git commit -m "Update modified files" || echo "No changes"
+        git push origin HEAD

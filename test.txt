@@ -1,0 +1,14 @@
+mail
+webmail
+cpanel
+webdisk
+cpcontacts
+cpcalendars
+autodiscover
+hostmaster
+ote-cube
+onetrust
+publicdnsforum
+unav
+gp
+view
